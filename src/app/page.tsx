@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client"
 import Link from "next/link";
 
 export default function Home() {
@@ -12,6 +12,9 @@ export default function Home() {
         <p>
           <Link href="./getting-started.html">Get pumped up fam</Link>
         </p>
+        <p><button onClick={() => {
+          window.history.pushState({ seen: "intro" }, "", "./intro.html")
+        }}>PushState</button></p>
       </div>
     </main>
   );
